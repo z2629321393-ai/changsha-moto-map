@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>点位录入助手｜骑不快的ZZ</title>
+  <title>点位录入工作台｜骑不快的ZZ</title>
   <link rel="icon" href="assets/favicon.png" />
   <link rel="stylesheet" href="assets/styles.css">
   <style>
-    body{height:auto;min-height:100vh;overflow:auto}.admin{max-width:1040px;margin:24px auto 54px;padding:0 16px}.admin-hero{display:flex;align-items:center;gap:14px;margin-bottom:18px}.admin-hero img{width:64px;height:64px;border-radius:20px;object-fit:cover;box-shadow:var(--soft-shadow);border:3px solid #fff}.admin-hero h1{margin:0;font-size:28px;letter-spacing:-.03em}.admin-hero p{margin:6px 0 0;color:var(--muted);font-weight:800}.admin textarea{width:100%;min-height:220px;border:1px solid var(--border);border-radius:16px;padding:12px;font-family:ui-monospace,Consolas,monospace;background:#fff}.form{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.form label{font-size:13px;color:var(--muted);font-weight:900}.form input,.form select,.form textarea{margin-top:5px;width:100%;height:40px;border:1px solid var(--border);border-radius:12px;padding:0 10px;background:#fff;color:var(--text)}.form textarea{height:82px;padding:10px}.wide{grid-column:1/-1}.admin .bar{display:flex;gap:9px;flex-wrap:wrap;margin:14px 0}.admin button,.admin a{border:1px solid rgba(21,33,58,.14);background:#fff;border-radius:999px;min-height:38px;padding:0 14px;color:var(--text);text-decoration:none;display:inline-flex;align-items:center;cursor:pointer;font-weight:900}.admin .primary{background:linear-gradient(135deg,var(--primary),var(--accent));color:white;border-color:transparent}@media(max-width:760px){.form{grid-template-columns:1fr}.admin-hero h1{font-size:22px}}
+    body{height:auto;min-height:100vh;overflow:auto}.admin{max-width:1280px;margin:22px auto 54px;padding:0 16px}.admin-hero{display:flex;align-items:center;gap:14px;margin-bottom:18px}.admin-hero img{width:64px;height:64px;border-radius:20px;object-fit:cover;box-shadow:var(--soft-shadow);border:3px solid #fff}.admin-hero h1{margin:0;font-size:28px;letter-spacing:-.03em}.admin-hero p{margin:6px 0 0;color:var(--muted);font-weight:800}.admin-grid{display:grid;grid-template-columns:minmax(420px,520px) 1fr;gap:14px;align-items:start}.admin-map{height:620px;border-radius:22px;overflow:hidden;border:1px solid var(--border);box-shadow:var(--soft-shadow);background:#e9f0f8}.form{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.form label,.batch-table label{font-size:13px;color:var(--muted);font-weight:900}.form input,.form select,.form textarea,.admin textarea,.search-box input,.batch-table input,.batch-table select{margin-top:5px;width:100%;border:1px solid var(--border);border-radius:12px;padding:0 10px;background:#fff;color:var(--text);outline:none}.form input,.form select,.search-box input,.batch-table input,.batch-table select{height:40px}.form textarea{height:82px;padding:10px}.wide{grid-column:1/-1}.admin .bar,.search-actions{display:flex;gap:9px;flex-wrap:wrap;margin:12px 0}.admin button,.admin a{border:1px solid rgba(21,33,58,.14);background:#fff;border-radius:999px;min-height:38px;padding:0 14px;color:var(--text);text-decoration:none;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;font-weight:900}.admin .primary{background:linear-gradient(135deg,var(--primary),var(--accent));color:white;border-color:transparent}.admin .danger{color:#b42318}.admin textarea{min-height:150px;padding:12px;font-family:ui-monospace,Consolas,monospace}.search-box{display:grid;grid-template-columns:1fr auto;gap:8px}.candidate-list{display:grid;gap:8px;margin-top:10px;max-height:190px;overflow:auto}.candidate{display:block;text-align:left;border-radius:14px!important;padding:9px 10px!important;height:auto!important;min-height:0!important}.candidate b{display:block}.candidate small{display:block;color:var(--muted);margin-top:2px}.admin-help ol{padding-left:20px;margin:8px 0 0}.admin-help li{margin:6px 0;color:#334155;line-height:1.5}.batch-table{display:grid;gap:8px;margin-top:10px}.batch-row{display:grid;grid-template-columns:1.3fr .9fr .8fr .8fr auto;gap:7px;align-items:end;padding:9px;border:1px solid rgba(21,33,58,.10);border-radius:14px;background:rgba(255,255,255,.72)}.batch-row button{padding:0 10px;font-size:12px}.status-line{font-size:12px;color:var(--muted);font-weight:800;margin-top:6px}.map-tip{position:absolute;z-index:10;left:12px;right:12px;bottom:12px;background:rgba(255,255,255,.9);border:1px solid rgba(255,255,255,.7);border-radius:16px;padding:10px 12px;font-size:12px;font-weight:800;color:#334155;box-shadow:var(--soft-shadow);backdrop-filter:blur(12px)}.map-wrap{position:relative}.copy-toast{font-size:12px;color:#15803d;font-weight:900}.admin-output{min-height:220px}@media(max-width:980px){.admin-grid{grid-template-columns:1fr}.admin-map{height:460px}.batch-row{grid-template-columns:1fr 1fr}.batch-row .row-actions{grid-column:1/-1}}@media(max-width:760px){.form{grid-template-columns:1fr}.admin-hero h1{font-size:22px}.search-box{grid-template-columns:1fr}.batch-row{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
@@ -15,36 +15,90 @@
     <div class="admin-hero">
       <img src="assets/zz-logo.webp" alt="骑不快的ZZ">
       <div>
-        <div class="eyebrow" style="color:#f97316">LAZY RIDER ZZ · DATA TOOL</div>
-        <h1>点位录入助手</h1>
-        <p>把实拍、截图、网友反馈整理成统一JSON。没有核实的点位不要写成已核实电子眼。</p>
+        <div class="eyebrow" style="color:#f97316">LAZY RIDER ZZ · DATA WORKBENCH</div>
+        <h1>点位录入工作台</h1>
+        <p>地图点选、搜索路口、批量文本转JSON。未核实截图点默认全部按待核实处理。</p>
       </div>
     </div>
-    <section class="card">
-      <div class="form">
-        <label>名称<input id="name" placeholder="例如：XX路口疑似抓拍点"></label>
-        <label>类型<select id="type"><option value="user_report">用户反馈待核实</option><option value="camera_unverified">待核实电子眼</option><option value="camera_verified">已核实电子眼</option><option value="official_boundary">官方边界提示</option><option value="bridge_tunnel">桥隧/跨江入口</option><option value="risk_road">重点边界道路</option></select></label>
-        <label>经度 lng<input id="lng" placeholder="112.990000"></label>
-        <label>纬度 lat<input id="lat" placeholder="28.210000"></label>
-        <label>方向/位置<input id="direction" placeholder="由南往北 / 路口东北角"></label>
-        <label>来源<input id="source" placeholder="实拍/网友投稿/官方公告"></label>
-        <label>可信度<input id="confidence" value="待核实"></label>
-        <label>更新时间<input id="updatedAt" type="date"></label>
-        <label class="wide">备注<textarea id="note" placeholder="描述看到的标志、摄像头朝向、拍摄时间、是否有现场禁令标志"></textarea></label>
+
+    <section class="admin-grid">
+      <div>
+        <section class="card">
+          <div class="card-title">搜索路口取点</div>
+          <div class="search-box">
+            <input id="searchQuery" type="search" placeholder="输入路口/地标，如：长沙大道古曲南路">
+            <button id="searchPlace" class="primary" type="button">搜索</button>
+          </div>
+          <div id="candidateList" class="candidate-list"></div>
+          <div id="adminStatus" class="status-line">点击地图任意位置也可以直接取点。</div>
+        </section>
+
+        <section class="card">
+          <div class="card-title">手动录入点位信息</div>
+          <div class="form">
+            <label>id<input id="id" placeholder="留空自动生成，如 CS-SCREEN-001"></label>
+            <label>type<select id="type">
+              <option value="camera_unverified">camera_unverified｜待核实电子眼</option>
+              <option value="camera_verified">camera_verified｜已核实风险点</option>
+              <option value="ban_boundary">ban_boundary｜禁摩边界</option>
+              <option value="risky_road">risky_road｜高风险路段</option>
+              <option value="bridge_tunnel_entry">bridge_tunnel_entry｜桥隧入口</option>
+            </select></label>
+            <label class="wide">name<input id="name" placeholder="例如：长沙大道/古曲南路附近待核实点"></label>
+            <label>lng<input id="lng" inputmode="decimal" placeholder="113.034800"></label>
+            <label>lat<input id="lat" inputmode="decimal" placeholder="28.171200"></label>
+            <label class="wide">direction<input id="direction" placeholder="路口附近，方向待核实"></label>
+            <label>confidence<input id="confidence" value="截图粗定位，待实地复核"></label>
+            <label>source<input id="source" value="user_screenshot"></label>
+            <label>updatedAt<input id="updatedAt" type="date"></label>
+            <label class="wide">note<textarea id="note">来自用户截图/地图截图粗定位，不代表官方数据，请以现场交通标志和官方信息为准。</textarea></label>
+          </div>
+          <div class="bar">
+            <button class="primary" id="generate" type="button">生成JSON</button>
+            <button id="copy" type="button">复制</button>
+            <button id="clearForm" type="button">清空</button>
+            <a href="index.html">返回地图</a>
+          </div>
+          <textarea id="output" class="admin-output" placeholder="生成结果会出现在这里"></textarea>
+        </section>
+
+        <section class="card">
+          <div class="card-title">批量文本转JSON</div>
+          <p class="hint">一行一个点，例如：白沙湾/荷花路附近，待核实。先生成表格，再逐行搜索坐标或地图点选。</p>
+          <textarea id="batchInput" placeholder="白沙湾/荷花路附近，待核实&#10;长沙大道/古曲南路附近，待核实&#10;浏阳河大道/大桥路附近，待核实"></textarea>
+          <div class="bar">
+            <button id="parseBatch" type="button">生成批量表格</button>
+            <button id="generateBatch" class="primary" type="button">一键生成多个JSON</button>
+            <button id="copyBatch" type="button">复制批量JSON</button>
+          </div>
+          <div id="batchTable" class="batch-table"></div>
+          <textarea id="batchOutput" class="admin-output" placeholder="批量JSON会出现在这里"></textarea>
+        </section>
+
+        <section class="card admin-help">
+          <div class="card-title">截图数据录入说明</div>
+          <ol>
+            <li>看截图里的路名和路口。</li>
+            <li>在搜索框输入路口名称。</li>
+            <li>在地图上确认大概位置。</li>
+            <li>点击地图取点，或点击候选结果。</li>
+            <li>类型选“待核实电子眼”。</li>
+            <li>生成JSON。</li>
+            <li>复制到 <code>data/points.json</code> 的 <code>points</code> 数组里。</li>
+            <li>回到首页刷新查看效果。</li>
+          </ol>
+        </section>
       </div>
-      <div class="bar"><button class="primary" id="generate">生成JSON片段</button><button id="copy">复制</button><a href="index.html">返回地图</a><a href="preview.html">看预览</a></div>
-      <textarea id="output" placeholder="生成结果会出现在这里"></textarea>
-    </section>
-    <section class="card">
-      <div class="card-title">录入规则</div>
-      <ol>
-        <li>电子眼点位必须保留来源，未核实一律用“待核实”。</li>
-        <li>坐标用高德GCJ-02，不要混用百度BD-09。</li>
-        <li>每个点位最好保留截图/照片，但不要把隐私车牌放入公开仓库。</li>
-        <li>页面表达用“通行提醒/风险提醒”，不要写“躲抓拍”。</li>
-      </ol>
+
+      <section class="card map-wrap">
+        <div class="card-title">地图点击取点</div>
+        <div id="adminMap" class="admin-map"></div>
+        <div class="map-tip">点击地图任意位置自动填入经纬度；批量表格中点“地图选点”后，下一次点击会填入对应行。</div>
+      </section>
     </section>
   </main>
-  <script src="js/admin.js"></script>
+
+  <script src="js/config.js?v=workbench-20260705"></script>
+  <script src="js/admin.js?v=workbench-20260705"></script>
 </body>
 </html>
