@@ -1,0 +1,11 @@
+{
+  "name": "骑不快的ZZ｜长沙摩托通行提醒地图",
+  "short_name": "ZZ通行地图",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#fff7ed",
+  "theme_color": "#17243f",
+  "icons": [
+    { "src": "assets/zz-logo-192.png", "sizes": "192x192", "type": "image/png" }
+  ]
+}

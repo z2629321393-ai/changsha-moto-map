@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>点位录入助手｜骑不快的ZZ</title>
+  <link rel="icon" href="assets/favicon.png" />
+  <link rel="stylesheet" href="assets/styles.css">
+  <style>
+    body{height:auto;min-height:100vh;overflow:auto}.admin{max-width:1040px;margin:24px auto 54px;padding:0 16px}.admin-hero{display:flex;align-items:center;gap:14px;margin-bottom:18px}.admin-hero img{width:64px;height:64px;border-radius:20px;object-fit:cover;box-shadow:var(--soft-shadow);border:3px solid #fff}.admin-hero h1{margin:0;font-size:28px;letter-spacing:-.03em}.admin-hero p{margin:6px 0 0;color:var(--muted);font-weight:800}.admin textarea{width:100%;min-height:220px;border:1px solid var(--border);border-radius:16px;padding:12px;font-family:ui-monospace,Consolas,monospace;background:#fff}.form{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.form label{font-size:13px;color:var(--muted);font-weight:900}.form input,.form select,.form textarea{margin-top:5px;width:100%;height:40px;border:1px solid var(--border);border-radius:12px;padding:0 10px;background:#fff;color:var(--text)}.form textarea{height:82px;padding:10px}.wide{grid-column:1/-1}.admin .bar{display:flex;gap:9px;flex-wrap:wrap;margin:14px 0}.admin button,.admin a{border:1px solid rgba(21,33,58,.14);background:#fff;border-radius:999px;min-height:38px;padding:0 14px;color:var(--text);text-decoration:none;display:inline-flex;align-items:center;cursor:pointer;font-weight:900}.admin .primary{background:linear-gradient(135deg,var(--primary),var(--accent));color:white;border-color:transparent}@media(max-width:760px){.form{grid-template-columns:1fr}.admin-hero h1{font-size:22px}}
+  </style>
+</head>
+<body>
+  <main class="admin">
+    <div class="admin-hero">
+      <img src="assets/zz-logo.webp" alt="骑不快的ZZ">
+      <div>
+        <div class="eyebrow" style="color:#f97316">LAZY RIDER ZZ · DATA TOOL</div>
+        <h1>点位录入助手</h1>
+        <p>把实拍、截图、网友反馈整理成统一JSON。没有核实的点位不要写成已核实电子眼。</p>
+      </div>
+    </div>
+    <section class="card">
+      <div class="form">
+        <label>名称<input id="name" placeholder="例如：XX路口疑似抓拍点"></label>
+        <label>类型<select id="type"><option value="user_report">用户反馈待核实</option><option value="camera_unverified">待核实电子眼</option><option value="camera_verified">已核实电子眼</option><option value="official_boundary">官方边界提示</option><option value="bridge_tunnel">桥隧/跨江入口</option><option value="risk_road">重点边界道路</option></select></label>
+        <label>经度 lng<input id="lng" placeholder="112.990000"></label>
+        <label>纬度 lat<input id="lat" placeholder="28.210000"></label>
+        <label>方向/位置<input id="direction" placeholder="由南往北 / 路口东北角"></label>
+        <label>来源<input id="source" placeholder="实拍/网友投稿/官方公告"></label>
+        <label>可信度<input id="confidence" value="待核实"></label>
+        <label>更新时间<input id="updatedAt" type="date"></label>
+        <label class="wide">备注<textarea id="note" placeholder="描述看到的标志、摄像头朝向、拍摄时间、是否有现场禁令标志"></textarea></label>
+      </div>
+      <div class="bar"><button class="primary" id="generate">生成JSON片段</button><button id="copy">复制</button><a href="index.html">返回地图</a><a href="preview.html">看预览</a></div>
+      <textarea id="output" placeholder="生成结果会出现在这里"></textarea>
+    </section>
+    <section class="card">
+      <div class="card-title">录入规则</div>
+      <ol>
+        <li>电子眼点位必须保留来源，未核实一律用“待核实”。</li>
+        <li>坐标用高德GCJ-02，不要混用百度BD-09。</li>
+        <li>每个点位最好保留截图/照片，但不要把隐私车牌放入公开仓库。</li>
+        <li>页面表达用“通行提醒/风险提醒”，不要写“躲抓拍”。</li>
+      </ol>
+    </section>
+  </main>
+  <script src="js/admin.js"></script>
+</body>
+</html>

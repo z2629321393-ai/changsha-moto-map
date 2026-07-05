@@ -1,0 +1,35 @@
+{
+  "meta": {
+    "updatedAt": "2026-07-03",
+    "note": "项目只采用公开通告/公开报道作为种子数据；网友点位必须标记为待核实。"
+  },
+  "sources": [
+    {
+      "id": "SRC-OFFICIAL-2025-04",
+      "name": "长沙市公安局交通警察支队《关于市区部分区域道路禁止摩托车通行的通告》长公交发〔2025〕04号",
+      "type": "official_notice",
+      "url": "https://imgbdb4.bendibao.com/csbdb/traffic/202510/27/20251027123135_45903.pdf",
+      "publishedAt": "2025-02-11",
+      "summary": "明确长沙市区部分区域禁止摩托车通行的合围道路、适用摩托车类型、处罚口径与旧通告废止。",
+      "trustLevel": "official"
+    },
+    {
+      "id": "SRC-REDNET-2025-02-14",
+      "name": "红网/潇湘晨报：长沙市区部分区域道路禁摩",
+      "type": "media_report",
+      "url": "https://hn.rednet.cn/content/646946/58/14702417.html",
+      "publishedAt": "2025-02-14",
+      "summary": "复述2025年通告中的禁摩区域、车辆类型与处罚提醒。",
+      "trustLevel": "media"
+    },
+    {
+      "id": "SRC-BENDIBAO-2025-02-27",
+      "name": "长沙本地宝：长沙摩托车限行区域道路汇总",
+      "type": "local_guide",
+      "url": "https://cs.bendibao.com/traffic/202459/120452.shtm",
+      "publishedAt": "2025-02-27",
+      "summary": "汇总2025年通告范围，并说明2025年2月11日起施行、2020年旧通告废止。",
+      "trustLevel": "reference"
+    }
+  ]
+}
